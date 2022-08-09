@@ -166,10 +166,13 @@ nav .right-side a {
     text-decoration: none;
 }
 
-.wrapper .right-side .skill .item {
-    padding: 5px 10px;
+.wrapper .right-side .skill .item a{
+    padding: 5px 0px;
     border-radius: 10px;
     margin-right: 0px;
+    color:black;
+    font-weight: bold;
+    text-decoration:none;
 }
 
 .wrapper .right-side .skill .download img{

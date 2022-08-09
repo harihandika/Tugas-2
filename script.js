@@ -1,16 +1,17 @@
-function showData() {
-  // DOM = Document Object Model
-  let name = document.getElementById("name").value
-  let email = document.getElementById("email").value
-  let phone = document.getElementById("phone").value
-  let subject = document.getElementById("subject").value
-  let message = document.getElementById("contactMessage").value
 
-  document.getElementById("name").value = ""
-  document.getElementById("email").value = ""
-  document.getElementById("phone").value = ""
-  document.getElementById("subject").value = ""
-  document.getElementById("contactMessage").value = ""
+function submitForm() {
+  // DOM = Document Object Model
+  let name = document.getElementById("input-name").value
+  let email = document.getElementById("input-email").value
+  let phone = document.getElementById("input-phone").value
+  let subject = document.getElementById("choose-subject").value
+  let message = document.getElementById("input-message").value
+
+  document.getElementById("input-name").value = ""
+  document.getElementById("input-email").value = ""
+  document.getElementById("input-phone").value = ""
+  document.getElementById("choose-subject").value = ""
+  document.getElementById("input-message").value = ""
 
   // VALIDATION
   if (name, email, phone, subject, message == "") {
@@ -20,7 +21,7 @@ function showData() {
   let emailReceiver = "harihandika2441998@gmail.com"
 
   let a = document.createElement('a')
-  a.href = `mailto:${emailReceiver}?subject=${subject}&body=Hello, my name ${name}, ${subject}, ${message}`
+  a.href = `mailto:${emailReceiver}?subject=${subject}&body=Hello, my name ${name},My phone Number ${phone}, ${subject}, ${message}`
      
   a.click()
 
@@ -31,9 +32,9 @@ function showData() {
   let dataObject = {
       name: name,
       email: email,
-      phone,
-      subject,
-      message
+      phone:phone,
+      subject:subject,
+      message: message,
   }
 
   console.table(dataObject)
